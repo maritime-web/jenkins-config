@@ -1,7 +1,10 @@
 FROM jenkins/jenkins
 
-USER ROOT
+COPY jenkins-plugins.txt /usr/share/jenkins/ref/plugins.txt
+RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 
-apt-get update && apt-get install build-essential
+USER root
+
+RUN apt-get update && apt-get install -y build-essential
 
 USER jenkins

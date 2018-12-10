@@ -1,11 +1,12 @@
 version: '3.5'
 services:
-  balticweb:
+  jenkins:
+    build: .
     image: dmadk/jenkins
     container_name: jenkins
     ports:
-      - "8080:8080"
-      - "50000:50000"
+      - "8087:8080"
+      - "50007:50000"
     volumes:
       - ~/jenkins_home:/var/jenkins_home
-    restart: unless-stopped
+#    restart: unless-stopped
