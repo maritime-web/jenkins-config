@@ -36,8 +36,6 @@ At the hour of writing not all repos have Jenkinsfiles. You can see progress in 
 * Update readme with install instructions
 * Fix "E-nav service, why does it fail" : Steen kigger på
 * Lav jenkins files til alle relevante repoer. Du kan se listen her: https://dma.ci.cloudbees.com/
-  * TODO Baltic Web.
-  * TODO Enav Services.
   * TODO AisAbnormal
   * TODO AisAnalysis
   * TODO AisCoverage
@@ -57,14 +55,14 @@ At the hour of writing not all repos have Jenkinsfiles. You can see progress in 
   * TODO ArcticWeb2Alpha
   * TODO ArcticWeb2Test
   * TODO async-couchdb-client
-  * TODO BalticWeb
+  * DONE BalticWeb
   * TODO BalticWeb - Build Docker Image
   * TODO dma-commons
   * TODO dma-web
   * TODO e-Navigation
   * TODO e-Navigation-javadoc
   * TODO enav-network
-  * TODO Enav-Services
+  * REVIEW Enav-Services (Wermuth made this build, trick was not to set a jdk version, the default is openjdk 1.8)
   * TODO Enav-Services-Release
   * TODO Enav-services_integration_tests
   * TODO Enav-services_MC_Service_registry
