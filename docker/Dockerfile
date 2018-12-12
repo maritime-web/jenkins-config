@@ -8,6 +8,9 @@ COPY tool_config/hudson.tasks.Maven.xml  /usr/share/jenkins/ref/hudson.tasks.Mav
 
 USER root
 
-RUN apt-get update && apt-get install -y build-essential
+RUN apt-get update && apt-get install -y build-essential dos2unix
+
+RUN dos2unix /usr/share/jenkins/ref/plugins.txt
+RUN dos2unix /usr/share/jenkins/ref/hudson.tasks.Maven.xml
 
 USER jenkins
