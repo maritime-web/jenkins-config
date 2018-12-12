@@ -37,7 +37,7 @@ At the hour of writing not all repos have Jenkinsfiles. You can see progress in 
 * Fix "E-nav service, why does it fail" : Steen kigger på
 * Lav jenkins files til alle relevante repoer. Du kan se listen her: https://dma.ci.cloudbees.com/
   * Baltic Web. Bygger med Jenkinsfil.
-  * Enav Services.
+  * Enav Services. (wermuth is working on this)
   * AisAbnormal
   * AisAnalysis
   * AisCoverage
