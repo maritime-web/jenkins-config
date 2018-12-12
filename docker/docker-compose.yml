@@ -8,5 +8,7 @@ services:
       - "8087:8080"
       - "50007:50000"
     volumes:
-      - ~/jenkins_home:/var/jenkins_home
+      - type: bind
+        source: ./jenkins_home
+        target: /var/jenkins_home
 #    restart: unless-stopped
