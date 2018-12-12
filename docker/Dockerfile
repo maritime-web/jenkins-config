@@ -2,7 +2,7 @@
 #   changed "under the hood" from the user perspective, which is what may happen when not fixing the version.
 #   This is what an unfixed FROM looks like:
 #
-#   FROM jenkins/jenkins:2.60.3
+#   FROM jenkins/jenkins
 #
 FROM jenkins/jenkins:2.155
 
