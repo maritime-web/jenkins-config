@@ -164,4 +164,4 @@ hs_err_pid*
 
 # Ignore all files in docker/jenkins_home, its a directory specific to the locally instance used for development of docker-jenkins
 docker/jenkins_home
-
+/docker/nohup.out
