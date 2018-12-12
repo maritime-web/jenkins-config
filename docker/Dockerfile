@@ -1,4 +1,10 @@
-FROM jenkins/jenkins
+# Fixed version to 2.60.3. Do not really care which version is chosen, but its important that the version is not
+#   changed "under the hood" from the user perspective, which is what may happen when not fixing the version.
+#   This is what an unfixed FROM looks like:
+#
+#   FROM jenkins/jenkins:2.60.3
+#
+FROM jenkins/jenkins:2.60.3
 
 COPY jenkins-plugins.txt /usr/share/jenkins/ref/plugins.txt
 RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
