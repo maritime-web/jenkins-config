@@ -40,7 +40,7 @@ At the hour of writing not all repos have Jenkinsfiles. You can see progress in 
   * TODO AisTrack
   * TODO AisView
   * DONE BalticWeb
-  * TODO BalticWeb - Build Docker Image
+  * In Progress STE BalticWeb - Build Docker Image
   * TODO dma-commons
   * TODO dma-web
   * REVIEW Enav-Services (Wermuth made this build, trick was not to set a jdk version, the default is openjdk 1.8)
