@@ -11,12 +11,14 @@ RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 
 COPY tool_config/hudson.tasks.Maven.xml  /usr/share/jenkins/ref/hudson.tasks.Maven.xml
 COPY tool_config/hudson.maven.MavenModuleSet.xml  /usr/share/jenkins/ref/hudson.maven.MavenModuleSet.xml
+COPY tool_config/credentials.xml  /usr/share/jenkins/ref/credentials.xml
 #COPY init.groovy.d/createProjects.groovy  /usr/share/jenkins/ref/init.groovy.d/createProjects.groovy
 
 USER root
 
 RUN apt-get update && apt-get install -y build-essential dos2unix
 
+RUN dos2unix /usr/share/jenkins/ref/credentials.xml
 RUN dos2unix /usr/share/jenkins/ref/plugins.txt
 RUN dos2unix /usr/share/jenkins/ref/hudson.tasks.Maven.xml
 RUN dos2unix /usr/share/jenkins/ref/hudson.maven.MavenModuleSet.xml
