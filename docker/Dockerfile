@@ -4,7 +4,7 @@
 #
 #   FROM jenkins/jenkins
 #
-FROM jenkins/jenkins:2.155
+FROM jenkins/jenkins:2.155-alpine
 
 COPY jenkins-plugins.txt /usr/share/jenkins/ref/plugins.txt
 RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
@@ -16,7 +16,7 @@ COPY tool_config/credentials.xml  /usr/share/jenkins/ref/credentials.xml
 
 USER root
 
-RUN apt-get update && apt-get install -y build-essential dos2unix
+RUN apk update && apk add -f build-essential dos2unix
 
 RUN dos2unix /usr/share/jenkins/ref/credentials.xml
 RUN dos2unix /usr/share/jenkins/ref/plugins.txt
